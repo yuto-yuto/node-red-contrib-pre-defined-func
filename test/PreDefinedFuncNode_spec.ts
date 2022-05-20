@@ -7,6 +7,7 @@ import * as Selector from "../lib/StoredFunctions/FunctionSelector";
 import { ExampleFunction } from "../lib/StoredFunctions/ExampleFunction";
 import PreDefinedFuncNode = require("../lib/PreDefinedFuncNode");
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const helper = require("node-red-node-test-helper");
 
 describe("PreDefinedFuncNode", () => {
@@ -78,7 +79,7 @@ describe("PreDefinedFuncNode", () => {
 
     it("should send a payload if msg is not undefined or null", (done) => {
         sinon.stub(selector, "execute").returns({
-            _msgid: "111",
+            _msgid: "111", 
             payload: "something",
         });
 
