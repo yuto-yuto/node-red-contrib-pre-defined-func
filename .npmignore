@@ -1,0 +1,7 @@
+lib/
+test/
+dist/test/
+dist/**/*.d.ts
+dist/**/*.js.map
+.mocharc.jsonc
+tsconfig.json

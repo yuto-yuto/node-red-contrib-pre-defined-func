@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    (function () {
+        const NODE_NAME = 'pre-defined-func';
+
+        RED.nodes.registerType(NODE_NAME, {
+            category: 'function',
+            color: '#a6bbcf',
+            defaults: {
+                name: { value: "" },
+                funcName: { value: "", required: true },
+            },
+            inputs: 1,
+            outputs: 1,
+            icon: "function.svg",
+            label: function () {
+                return this.name || this.funcName || NODE_NAME;
+            }
+        });
+    })();
+</script>
+
+<script type="text/x-red" data-template-name="pre-defined-func">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-funcName"><i class="fa fa-circle-o"></i>&nbsp;Func name</label>
+        <select id="node-input-funcName" style="width:125px">
+            <option value="Example">Example</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="pre-defined-func">
+    <p>A node to provide pre-defined function. Use this node as a replacement of function node.</p>
+</script>
